@@ -1,7 +1,5 @@
-[build.environment]
-  NETLIFY_USE_PNPM = "true"
-  NODE_VERSION = "18"
-
 [build]
-  command = "OUTPUT=netlify astro build"
+  # Indica el comando de build (aunque ya lo tienes en Netlify)
+  command = "npm run build"
+  # Indica el directorio donde está el index.html final
   publish = "dist"
