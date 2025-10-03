@@ -114,7 +114,7 @@ section {
   scroll-margin-top: 60px;
 }
 
-section h3 {
+section h2 {
   font-size: 1.3rem;
   margin-bottom: 30px;
   font-weight: 400;
@@ -155,7 +155,7 @@ section h3 {
 }
 
 .education-category {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -191,7 +191,7 @@ section h3 {
 }
 
 .course-list li::before {
-    content: "- ";
+    content: "•";
     position: absolute;
     left: 0;
     color: #64748b;
@@ -202,7 +202,7 @@ section h3 {
   flex-wrap: wrap;
   gap: 15px;
   list-style: none;
-  color: #64748b;              /*   #cbd5e1;*/
+  color: #64748b;              
   font-size: 1rem;
 }
 
@@ -365,7 +365,7 @@ section h3 {
         padding-bottom: 30px;
     }
 
-    section h3 {
+    section h2 {
         visibility: visible;
     }
 
