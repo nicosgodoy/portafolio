@@ -1,0 +1,222 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Godoy - Desarrollador de Software</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-border"></div>
+    
+    <div class="container">
+        <!-- Panel Izquierdo Fijo -->
+        <aside class="left-panel">
+            <div>
+                <div class="profile">
+                    <h1>Nicolas Godoy</h1>
+                    <h2>Desarrollador de software</h2>
+                    <p>Aprendiendo, construyendo, innovando cada día</p>
+                </div>
+
+                <nav class="navigation">
+                    <a href="#about">About</a>
+                    <a href="#estudios">Estudios</a>
+                    <a href="#conocimientos">Conocimientos</a>
+                    <a href="#proyectos">Proyectos</a>
+                </nav>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/feed/" target="blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/nicosgodoy" target="blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+               
+                <a href="mailto:nicodepor@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <!-- Icono de Email -->
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+        </a>
+            </div>
+        </aside>
+
+        <!-- Panel Derecho con Scroll -->
+        <main class="right-panel">
+            <!-- About Section -->
+            <section id="about">
+                <h3>About</h3>
+                <p class="about-text">
+"Mi historia en el desarrollo de software comenzó de adulto, pero con la <scan style="color:#cbd5e1">pasión</scan> desbordante y la curiosidad insaciable de un joven que acaba de descubrir un mundo fascinante. Esa energía inicial nunca me abandonó y hoy es el motor que impulsa cada proyecto que emprendo.
+
+Mi base está en el ecosistema <scan style="color:#cbd5e1">Java</scan>, con experiencia en proyectos que combinan <scan style="color:#cbd5e1">lógica, estructuras de datos y arquitectura de software</scan>. A la par, estoy adentrándome en el mundo de la <scan style="color:#cbd5e1">inteligencia artificial</scan>, explorando cómo aplicar técnicas modernas para crear soluciones más inteligentes y adaptativas.
+
+Creo en el <scan style="color:#cbd5e1">aprendizaje continuo, la disciplina y la creatividad</scan> como pilares para crecer en este camino. Mi objetivo es seguir desarrollando proyectos que integren tecnología con impacto real, mientras fortalezco mi perfil en <scan style="color:#cbd5e1">IA y software de calidad</scan>."*                </p>
+            </section>
+
+           <section id="estudios">
+    <h3>Estudios</h3>
+    
+    <div class="education-timeline">
+        <!-- Título principal -->
+        <div class="education-item">
+            <div class="education-year">2023-2025</div>
+            <div class="education-content">
+                <div class="education-category">Título</div>
+                <div class="education-title">Técnico Superior en Desarrollo de Software</div>
+                <div class="education-institution">Esc Sup de Comercio</div>
+            </div>
+        </div>
+
+        <!-- Cursos -->
+        <div class="education-item">
+            <div class="education-year">2025</div>
+            <div class="education-content">
+                <div class="education-category">Cursos</div>
+                <ul class="course-list">
+                    <li>Introducción al desarrollo web HTML y CSS - Google</li>
+                    <li>Introducción a la IA generativa - Google</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- Conocimiento Section -->
+            <section id="conocimientos">
+                <h3>Conocimiento</h3>
+                <h4>Backend</h4>
+                <ul class="knowledge-list">
+                    <li>- Java - Desarrollo de aplicaciones con programación orientada a objetos</li>
+                    <li>- Spring Boot - Creación de APIs RESTful </li>
+                    <li>- Spring Security - Implementación de autenticación y autorización</li>
+                    <li>- JUnit & Mockito - Testing unitario y de integración</li>
+                </ul>
+                <br>
+                <h4>Frontend</h4>
+                <ul class="knowledge-list">
+                    <li>- JavaScript (ES6+) - Desarrollo de interfaces interactivas</li>
+                    <li>- React - Construcción de aplicaciones SPA con hooks y context</li>
+                    <li>- Next.js - Desarrollo de aplicaciones full-stack con renderizado híbrido</li>
+                </ul>
+                <br>
+                <h4>Base de datos</h4>
+                <ul class="knowledge-list">
+                    <li>- SQL - Diseño y consultas en bases de datos relacionales</li>
+                    <li>- JPA/Hibernate - Mapeo objeto-relacional</li>
+                    <li>- PostgreSQL - Diseño de esquemas, consultas y optimización </li>
+                </ul>
+            </section>
+
+            <!-- Proyectos Section -->
+            <section id="proyectos">
+                <h3>Proyectos</h3>
+
+                <div class="project">
+                    <div class="project-image">
+                        <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/docintelia" target="blank">
+                            <img src="/Docintelia.png" alt="DocIntelia">
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <h4>DocIntelia</h4>
+                        <p>Este proyecto sirve para consumir textos en pdf y poder buscar información en los mismos a través de IA</p>
+                        <div class="project-tags">
+                            <span class="tag">Next</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring boot</span>
+                            <span class="tag">Spring security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/springbootPeluqueriaCanina" target="blanck">
+                            <img src="/peluqueria.png"  alt="Peluquería canina">
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <h4>Peluquería canina</h4>
+                        <p>Este proyecto se utiliza para la administración básica de una peluquería canina</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Swing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/dashboard" target="blank">
+                            <img src="/dashboard.png" alt="Dashboard">
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <h4>Dashboard</h4>
+                        <p>Aquí realizamos un dashboard con distintos tipos de datos, si bien no trabajamos con base de datos, es una muestra de lo que se puede hacer con la librería Shadon y React.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">Shadcn</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling para la navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+           anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlighting activo en la navegación
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navigation a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '#64748b';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = '#e4e4e7';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+

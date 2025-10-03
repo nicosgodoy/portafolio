@@ -1,0 +1,31 @@
+---
+import Project from './Project.astro';
+
+const projects = [
+    {
+        title: "DocIntelia",
+        description: "Este proyecto sirve para consumir textos en pdf y poder buscar información en los mismos a través de IA",
+        image: "/images/docintelia.png",
+        tags: ["Next", "React", "Java", "Spring boot", "Spring security"]
+    },
+    {
+        title: "Peluquería canina",
+        description: "Este proyecto se utiliza para la administración básica de una peluquería canina",
+        image: "/images/peluqueria.png",
+        tags: ["Java", "Swing"]
+    },
+    {
+        title: "Dashboard",
+        description: "Aquí realizamos un dashboard con distintos tipos de datos, si bien no trabajamos con base de datos, es una muestra de lo que se puede hacer con la librería Shadon y React.",
+        image: "/images/dashboard.png",
+        tags: ["Next", "React", "Tailwind", "Shadcn"]
+    }
+];
+---
+
+<section id="proyectos">
+    <h3>Proyectos</h3>
+    {projects.map(project => (
+        <Project {...project} />
+    ))}
+</section>
