@@ -4,9 +4,8 @@ import tailwind from "@astrojs/tailwind";
 import astroIcon from 'astro-icon';
 import mdx from '@astrojs/mdx';
 import playformCompress from "@playform/compress";
-// ✅ Importar Netlify (aunque no lo usaremos en modo estático, es la dependencia correcta)
-import netlify from "@astrojs/netlify"; 
-// ❌ Eliminamos la importación de vercel
+// ❌ ¡Se eliminó la línea de importación de netlify! (y la de vercel)
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,8 +28,7 @@ export default defineConfig({
       },
     })
   ],
-  // ✅ CAMBIO 1: El modo 'static' es ideal para tu portafolio.
+  // ✅ El modo 'static' es ideal para tu portafolio.
   output: 'static', 
-  // ❌ CAMBIO 2: Eliminamos el adaptador, ya que 'static' no lo requiere.
-  // adapter: netlify(), 
+  // ❌ Eliminamos la línea del adaptador
 });
