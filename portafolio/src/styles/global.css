@@ -122,6 +122,11 @@ section h2 {
 }
 
 /* About Section */
+
+#about {
+  margin-bottom: 400px;
+}
+
 .about-text {
   line-height: 1.8;
   color: #64748b;          /*#cbd5e1;*/
@@ -129,10 +134,15 @@ section h2 {
 }
 
 /* seccion educacion*/
+
+#estudios {
+  margin-bottom: 500px;
+}
 .education-timeline {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 250px;
 }
 
 .education-item {
@@ -185,6 +195,7 @@ section h2 {
 }
 
 .course-list li {
+    content: "•";
     margin-bottom: 6px;
     position: relative;
     padding-left: 12px;
@@ -197,6 +208,10 @@ section h2 {
     color: #64748b;
 }
 /* Conocimiento Section */
+#conocimientos {
+  margin-bottom: 250px;
+}
+
 .knowledge-list {
   display: block;
   flex-wrap: wrap;
@@ -207,6 +222,7 @@ section h2 {
 }
 
 .knowledge-list li {
+  content: "•";
   line-height: 2;
 }
 
