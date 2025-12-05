@@ -124,7 +124,7 @@ section h2 {
 /* About Section */
 
 #about {
-  margin-bottom: 400px;
+  margin-bottom: 450px;
 }
 
 .about-text {
@@ -207,6 +207,17 @@ section h2 {
     left: 0;
     color: #64748b;
 }
+/*skills*/
+
+#skills {
+  margin-bottom: 350px ;
+}
+
+.Knowledge-skills img {
+  margin:15px;
+}
+
+
 /* Conocimiento Section */
 #conocimientos {
   margin-bottom: 250px;
