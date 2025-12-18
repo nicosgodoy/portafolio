@@ -1,6 +1,44 @@
 <nav class="navigation">
-    <a href="#about">About</a>
+    <a href="#about">About me</a>
     <a href="#estudios">Estudios</a>
+    <a href="#skills">Skills</a>
     <a href="#conocimientos">Conocimientos</a>
     <a href="#proyectos">Proyectos</a>
 </nav>
+
+<style>
+    .navigation {
+  margin-top: 70px;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  color: #64748b;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative; 
+}
+
+.navigation a:hover {
+  color: #e4e4e7;
+}
+
+.navigation a::before {
+  content: ""; 
+  display: inline-block; 
+  width: 2rem; 
+  height: 1px; 
+  background: #475569;
+  margin-right: 15px;
+  transition: all 0.3s ease; 
+}
+.navigation a:hover::before {
+  
+  width: 4rem;
+  background: #e4e4e7;
+}
+
+</style>

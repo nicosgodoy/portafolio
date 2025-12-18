@@ -1,264 +1,75 @@
 ---
- import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import LinkSociales from '../components/LinkSociales.astro';
+import About from '../components/About.astro';
+import Estudios from '../components/Educacion.astro';
+import Skills from '../components/Skills.astro';
+import Conocimiento from '../components/Conocimiento.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Nombre from '../components/Nombre.astro';
+import Navegation from '../components/Navegation.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Godoy - Desarrollador de Software</title>
-    <meta name="description" content="Portfolio de Nicolas Godoy. Desarrollador de Software especializado en  Java, React, javascript, Node.js, Next y otras]. Experiencia en la creación de aplicaciones web .">
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="top-border"></div>
-    
-    <div class="container">
-        <!-- Panel Izquierdo Fijo -->
-        <aside class="left-panel">
-            <div>
-                <div class="profile">
-                    <h1>Nicolas Godoy</h1>
-                    <h2>Desarrollador de software</h2>
-                    <p>Aprendiendo, construyendo, innovando cada día</p>
-                </div>
+<BaseLayout title="Nicolas Godoy - Desarrollador de Software">
+  <div class="container">
+    <aside class="left-panel">
+      <div>
+        <Nombre />
+        <Navegation />
+      </div>
+      <LinkSociales />
+    </aside>
 
-                <nav class="navigation">
-                    <a href="#about">About me</a>
-                    <a href="#estudios">Estudios</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#conocimientos">Conocimientos</a>
-                    <a href="#proyectos">Proyectos</a>
-                </nav>
-            </div>
+    <main class="right-panel">
+      <About />
+      <Estudios />
+      <Skills />
+      <Conocimiento />
+      <Proyectos />
+    </main>
+  </div>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/nsgodoy" target="blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="https://github.com/nicosgodoy" target="blank" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-               
-                <a href="mailto:nicodepor3@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <!-- Icono de Email -->
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-        </a>
-            </div>
-        </aside>
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
 
-        <!-- Panel Derecho con Scroll -->
-        <main class="right-panel">
-            <!-- About Section -->
-            <section id="about">
-                <h2>About me</h2>
-                <p class="about-text">
-"Mi historia en el desarrollo de software comenzó de adulto, pero con la <scan style="color:#cbd5e1">pasión</scan> desbordante y la curiosidad insaciable de un joven que acaba de descubrir un mundo fascinante. Esa energía inicial nunca me abandonó y hoy es el motor que impulsa cada proyecto que emprendo.
+        const link = e.currentTarget as HTMLAnchorElement;
+        const href = link.getAttribute('href');
+        if (!href) return;
 
-Mi base está en el ecosistema <scan style="color:#cbd5e1">Java</scan>, con experiencia en proyectos que combinan <scan style="color:#cbd5e1">lógica, estructuras de datos y arquitectura de software</scan>. A la par, estoy adentrándome en el mundo de la <scan style="color:#cbd5e1">inteligencia artificial</scan>, explorando cómo aplicar técnicas modernas para crear soluciones más inteligentes y adaptativas.
+        const target = document.querySelector<HTMLElement>(href);
+        if (!target) return;
 
-Creo en el <scan style="color:#cbd5e1">aprendizaje continuo, la disciplina y la creatividad</scan> como pilares para crecer en este camino. Mi objetivo es seguir desarrollando proyectos que integren tecnología con impacto real, mientras fortalezco mi perfil en <scan style="color:#cbd5e1">IA y software de calidad</scan>."</p>
-            </section>
-
-<section id="estudios">
-    <h2>Estudios</h2>
-    
-    <div class="education-timeline">
-        <!-- Título principal -->
-        <div class="education-item">
-            <div class="education-year">2023-2025</div>
-            <div class="education-content">
-                <div class="education-category">Título</div>
-                <div class="education-title">Técnico Superior en Desarrollo de Software</div>
-                <div class="education-institution">Esc Sup de Comercio</div>
-            </div>
-        </div>
-
-        <!-- Cursos -->
-        <div class="education-item">
-            <div class="education-year">2025</div>
-            <div class="education-content">
-                <div class="education-category">Cursos</div>
-                <ul class="course-list">
-                    <li>Introducción al desarrollo web HTML y CSS - Google</li>
-                    <li>Introducción a la IA generativa - Google</li>
-                    <li>Docker esencial - LinkedIn</li>
-                    <li>Curso completo de Git y Github. Preparate para el desarrollo - Udemy</li>
-                    <li>Arquitectura de software: De desarrollador a arquitecto o arquitecta - LinkedIn</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-            <!-- Skills -->
-             <section id="skills">
-                <h2>Skills</h2>
-                <h3>Tecnologias conocidas</h3>
-                <div class="Knowledge-skills">
-                    <img  src="./java.png" alt=" icono de java" width="80px" height="80px">
-                    <img  src="./spring1.png" alt=" icono de spring" width="80px" height="80px">
-                    <img  src="./hibernate.png" alt=" icono de hibernate" width="80px" height="80px">
-                    <img  src="./html.png" alt=" icono de html" width="80px" height="80px">
-                    <img  src="./css-3.png" alt=" icono de css" width="80px" height="80px">
-                    <img  src="./javascript.png" alt=" icono de javascript" width="80px" height="80px">
-                    <img  src="./react.png" alt=" icono de react" width="80px" height="80px">
-                    <img  src="./typescript.png" alt=" icono de typescript" width="80px" height="80px">
-                    <img  src="./next.png" alt=" icono de next" width="80px" height="80px">
-                    <img  src="./junit5.png" alt=" icono de junit5" width="80px" height="80px">
-                    <img  src="./postgresql.png" alt=" icono de postgreSQL" width="80px" height="80px">                  
-                    <img  src="./mysql.png" alt=" icono de mysql" width="80px" height="80px">
-                    <img  src="./git.png" alt=" icono de git" width="80px" height="80px">
-                    <img  src="./github (2).png" alt=" icono de github" width="80px" height="80px">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt=" icono de jenkins" width="80px" height="80px" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt=" icono de postman" width="80px" height="80px" />
-          
-                </div>
-             </section>
-
-            <!-- Conocimiento Section -->
-            <section id="conocimientos">
-                <h2>Conocimiento</h2>
-                 <h3>Backend</h3> 
-                 <ul class="knowledge-list">
-                    <li style="justify-content:center"> Java - Desarrollo de aplicaciones con programación orientada a objetos</li>    
-                    
-                  <div>
-                    <li>  Spring Boot - Creación de APIs RESTful 
-                              <br>  Spring Security - Implementación de autenticación y autorización</li>
-                   </div>             
-                   <li> JUnit 5 & Mockito - Testing unitario y de integración</li>
-                </ul>
-                <br>
-                <h3>Frontend</h3>
-                <ul class="knowledge-list">
-                    <li> JavaScript (ES6+) - Desarrollo de interfaces interactivas</li>
-                    <li> React - Construcción de aplicaciones SPA con hooks y context</li>
-                    <li> Next.js - Desarrollo de aplicaciones full-stack con renderizado híbrido</li>
-                </ul>
-                <br>
-                <h3>Base de datos</h3>
-                <ul class="knowledge-list">
-                    <li> SQL - Diseño y consultas en bases de datos relacionales</li>
-                    <li> JPA/Hibernate - Mapeo objeto-relacional</li>
-                    <li> PostgreSQL - Diseño de esquemas, consultas y optimización </li>
-                </ul>
-            </section>
-
-            <!-- Proyectos Section -->
-            
-            <section id="proyectos">
-               
-                <h2>Proyectos</h2>
-                 <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/docintelia" target="blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="project">
-                    
-                    <div class="project-image">
-                     
-                        <img src="/Docintelia.png" alt="DocIntelia">
-                  
-                    </div>
-                    <div class="project-content">
-                       
-                        <h4 >DocIntelia</h4>
-                        <p>Este proyecto sirve para consumir textos en pdf y poder buscar información en los mismos a través de IA</p>
-                        <div class="project-tags">
-                            <span class="tag">Next</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring boot</span>
-                            <span class="tag">Spring security</span>
-                        </div>
-                    
-                    </div>
-                   
-                </div>
-                    </a> 
-                 <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/springbootPeluqueriaCanina" target="blanck" style="text-decoration: none; color: inherit; display: block;">
-                <div class="project">
-                    <div class="project-image">
-                        
-                            <img src="/peluqueria.png"  alt="Peluquería canina">
-                       
-                    </div>
-                    <div class="project-content">
-                        <h4>Peluquería canina</h4>
-                        <p>Este proyecto se utiliza para la administración básica de una peluquería canina</p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Swing</span>
-                        </div>
-                    </div>
-                </div>
-                </a> 
-               <a href="https://github.com/nicosgodoy/ProyectosJava/tree/master/dashboard" target="blank"  style="text-decoration: none; color: inherit; display: block;">
-                <div class="project">
-                    <div class="project-image">
-                         
-                            <img src="/dashboard.png" alt="Dashboard">
-                        
-                    </div>
-                    <div class="project-content">
-                        <h4>Dashboard</h4>
-                        <p>Aquí realizamos un dashboard con distintos tipos de datos, si bien no trabajamos con base de datos, es una muestra de lo que se puede hacer con la librería Shadon y React.</p>
-                        <div class="project-tags">
-                            <span class="tag">Next</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Tailwind</span>
-                            <span class="tag">Shadcn</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </section>
-        </main>
-    </div>
-
-    <script>
-        // Smooth scrolling para la navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-           anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
+      });
+    });
 
-        // Highlighting activo en la navegación
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.navigation a');
+    const sections = document.querySelectorAll<HTMLElement>('section');
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>('.navigation a');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
+    window.addEventListener('scroll', () => {
+      let current = '';
 
-            navLinks.forEach(link => {
-                link.style.color = '#64748b';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.color = '#e4e4e7';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+      sections.forEach(section => {
+        if (window.pageYOffset >= section.offsetTop - 200) {
+          current = section.id;
+        }
+      });
 
- 
+      navLinks.forEach(link => {
+        link.style.color = '#64748b';
+
+        const href = link.getAttribute('href');
+        if (href && href.slice(1) === current) {
+          link.style.color = '#e4e4e7';
+        }
+      });
+    });
+  </script>
+</BaseLayout>

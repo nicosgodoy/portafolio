@@ -1,17 +1,21 @@
  <section id="estudios">
-    <h3>Estudios</h3>
+    <h2>Estudios</h2>
     
-    <div class="education-item">
-        <h4>Título</h4>
-        <div>
-            <span class="year">2023-2025</span>
-            <span class="title">Técnico Superior en Desarrollo de Software- Esc Sup de Comercio</span>
+    <div class="education-timeline">
+       <div class="education-item">
+            <div class="education-year">2023-2025</div>
+            <div class="education-content">
+                <div class="education-category">Título</div>
+                <div class="education-title">Técnico Superior en Desarrollo de Software</div>
+                <div class="education-institution">Esc Sup de Comercio</div>
+            </div>
         </div>
-    </div>
 
-    <div class="courses">
-        <h4>Cursos</h4>
-        <ul class="course-list">
+        <div class="education-item">
+            <div class="education-year">2025</div>
+            <div class="education-content">
+                <div class="education-category">Cursos</div>
+                <ul class="course-list">
             <li>Introducción al desarrollo web HTML y CSS - Google</li>
             <li>Introducción a la IA generativa - Google</li>
             <li>Docker esencial - LinkedIn</li>
@@ -20,5 +24,81 @@
         </ul>
     </div>
 </section> 
+
+<style>
+    #estudios {
+  margin-bottom: 500px;
+}
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 250px;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.education-year {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 2px;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-category {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #e4e4e7;           
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.education-title {
+    color: #64748b ;                 
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.education-institution {
+    color: #64748b ;                     
+    font-size: 0.85rem;
+}
+
+.course-list {
+    list-style: none;
+    color:#64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.course-list li {
+    content: "•";
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 12px;
+}
+
+.course-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #64748b;
+}
+    
+</style>
 
 
